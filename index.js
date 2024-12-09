@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const port=8080;
 app.use(cors());
 
 const todos = [{
@@ -85,4 +86,8 @@ app.get("/notifications", (req, res) => {
 
 })
 
-app.listen(8080)
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
